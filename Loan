@@ -1,0 +1,91 @@
+package com.infosys;
+import java.util.Scanner;
+
+
+
+class Person{
+	private Integer accountNumber;
+	private Integer accountbalance;
+	private Double salary;
+	private String loanType;
+	private Integer requiredLoan;
+	private Integer availableEMI;
+	public Integer getAccountNumber() {
+		return accountNumber;
+	}
+	public void setAccountNumber(Integer accountNumber) {
+		this.accountNumber = accountNumber;
+	}
+	public Integer getAccountbalance() {
+		return accountbalance;
+	}
+	public void setAccountbalance(Integer accountbalance) {
+		this.accountbalance = accountbalance;
+	}
+	public Double getSalary() {
+		return salary;
+	}
+	public void setSalary(Double salary) {
+		this.salary = salary;
+	}
+	public String getLoanType() {
+		return loanType;
+	}
+	public void setLoanType(String loanType) {
+		this.loanType = loanType;
+	}
+	public Integer getRequiredLoan() {
+		return requiredLoan;
+	}
+	public void setRequiredLoan(Integer requiredLoan) {
+		this.requiredLoan = requiredLoan;
+	}
+	public Integer getAvailableEMI() {
+		return availableEMI;
+	}
+	public void setAvailableEMI(Integer availableEMI) {
+		this.availableEMI = availableEMI;
+	}
+	
+	 void checkEligibelForLoan() {
+		if(this.loanType.equalsIgnoreCase("car")) {
+			if(this.salary>25000) {
+				System.out.print("Eligible Loan: "+5000000+"Eligible EMI: "+36);
+			}
+		} else if(this.loanType.equalsIgnoreCase("Home")) {
+			if(this.salary>50000) {
+				System.out.print("Eligible Loan: "+60000000+"Eligible EMI: "+36);
+			}
+		} else if(this.loanType.equalsIgnoreCase("business")) {
+			if(this.salary>75000) {
+				System.out.print("Eligible Loan: "+75000000+"Eligible EMI: "+36);
+			}
+		} else {
+			System.out.print("Sorry Youn  are Not Eliglible for Loan....");
+		}
+	}
+	
+}
+
+
+
+
+public class GetLoan {
+
+	public static void main(String[] args) {
+		
+		Person p=new Person();
+		p.setAccountNumber(10001);
+		p.setAccountbalance(25000);
+		p.setSalary(40000.0);
+		p.setLoanType("c");
+		p.setRequiredLoan(300000);
+		p.setAvailableEMI(30);
+		//Person.checkEligibelForLoan();
+		//p.checkEligibelForLoan();
+		
+		
+
+	}
+
+}
